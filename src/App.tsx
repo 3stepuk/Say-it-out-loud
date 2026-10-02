@@ -229,6 +229,8 @@ const CONTRACT = {
     "You first, then the room.",
   ],
   closing: "These are things worth trying. None of them is a guarantee, and none of them replaces the people who are trained to look after her.",
+  // ── Mark's words, 2 Oct. The reason the whole app exists. ──
+  practice: "These sentences and phrases are not meant to be learnt parrot fashion. Knowing the principles, this is why we ask you to practise out loud. If you practise out loud and the phrase or the words feel off to you, you can make a change in the context of really understanding the principles.",
 };
 
 const STORAGE_KEY = "say_it_out_loud_progress_v2";
@@ -658,6 +660,22 @@ export default function App() {
           ))}
           <p className={`text-xs sm:text-sm italic mt-3 pt-2 border-t ${isDark ? 'border-[#59441f] text-[#aba092]' : 'border-[#e2cfa2] text-[#78716c]'}`}>
             {CONTRACT.closing}
+          </p>
+        </section>
+
+        {/* WHY PRACTISE OUT LOUD — the thing that makes it safe to use */}
+        <section className={`mb-6 sm:mb-8 p-4 sm:p-5 border font-serif ${
+          isDark ? 'border-[#59441f] bg-[#1c1611]' : 'border-[#e2cfa2] bg-[#fdfaf3]'
+        }`}>
+          <span className={`block font-sans text-xs uppercase tracking-wider font-bold mb-2 ${
+            isDark ? 'text-[#f0cb7e]' : 'text-[#63470d]'
+          }`}>
+            Why Practise Out Loud
+          </span>
+          <p className={`text-sm sm:text-base leading-relaxed ${
+            isDark ? 'text-[#e6d9c7]' : 'text-[#57534e]'
+          }`}>
+            {CONTRACT.practice}
           </p>
         </section>
 

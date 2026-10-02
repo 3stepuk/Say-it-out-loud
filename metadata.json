@@ -1,0 +1,11 @@
+{
+  "name": "Say It Out Loud — His Voice in the Birth Room",
+  "description": "A quiet, offline speaking-practice instrument for birth partners learning the language patterns of Mark Harris.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+

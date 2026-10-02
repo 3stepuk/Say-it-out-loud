@@ -30,6 +30,7 @@ interface Exercise {
   attend: string;
   workedExample: string;
   isHonestLimit?: boolean;
+  honestLimit?: string;
   honestLimitText?: string;
   reflectChecks: string[];
 }
@@ -57,6 +58,7 @@ const CONTENT: Exercise[] = [
     attend: "Three true things she can check right now with her senses, then one gentle suggestion. Never suggest before you have said what is true.",
     workedExample: "You can feel the cushion underneath you… hear my voice… notice my hand on your back — and your shoulders can soften.",
     isHonestLimit: false,
+      honestLimit: "This works on some of them and not others. If she is not in a place where she can hear you, no wording will reach her, and that is not a failure of yours.",
     reflectChecks: [
       "Did I say three things she could verify with her own senses before suggesting anything?",
       "Did my suggestion come last?",
@@ -71,6 +73,7 @@ const CONTENT: Exercise[] = [
     attend: "Swap the cold clinical words for the truer ones: replace 'failure to progress' with 'taking its time', 'contraction' with 'surge', and 'just relax' with 'let it come'.",
     workedExample: "This is taking its time, and taking its time is the work. Let the surge come, and as it passes, soften into the pillows.",
     isHonestLimit: false,
+      honestLimit: "The words help. They are not the reason a labour is difficult, and swapping a word out will not change a pelvis. Take from her the cold label if you can; do not expect the rest to follow.",
     reflectChecks: [
       "Which cold words did I take from her, and what truer words did I offer instead?",
       "Did I validate where she is without adopting the clinical label?",
@@ -85,6 +88,7 @@ const CONTENT: Exercise[] = [
     attend: "An order invites resistance. Use permissive language: 'you can', 'you might notice', 'allow'. Avoid 'you must' or 'calm down'.",
     workedExample: "You might notice where you are holding it… and allow your jaw to be a little heavy.",
     isHonestLimit: false,
+      honestLimit: "A suggestion she has not chosen is not a suggestion. If she says no, the answer is no, and that is the whole of it.",
     reflectChecks: [
       "Did I tell her what to do, or offer something she might notice and allow?",
       "Did I avoid words like 'must', 'try', or 'calm down'?",
@@ -99,6 +103,7 @@ const CONTENT: Exercise[] = [
     attend: "Offer a gentle choice where either answer helps. She chooses, and either option moves her in the same supportive direction.",
     workedExample: "Would you rather lean forward on the ball, or lie on your left side?",
     isHonestLimit: false,
+      honestLimit: "Sometimes the choice is not there to be made. A woman in transition will not be choosing between your options, and this is not the moment to offer her any.",
     reflectChecks: [
       "Did I give her a genuine choice, or a disguised instruction?",
       "Does either choice support her movement and rest?",
@@ -113,6 +118,7 @@ const CONTENT: Exercise[] = [
     attend: "The five steps, in order: 1. Get into her line of sight, hold her face or hands. 2. Match her. 3. Turn it. 4. Drop your voice and lead. 5. Hand her back to herself.",
     workedExample: "I can see how powerful this is… and that power is your body opening. As it fades, let your hands soften. You are so powerful. Yield to it.",
     isHonestLimit: false,
+      honestLimit: "In a real crisis the staff are working and you are not the clinician. Your job is presence and a steady voice. Do not make decisions here.",
     reflectChecks: [
       "Did I get into her line of sight first and establish contact?",
       "Did I match her intensity before attempting to turn it?",
@@ -128,6 +134,7 @@ const CONTENT: Exercise[] = [
     attend: "Low, slow, falling pitch at the end. Certainty steadies her. Touch starts a beat before you speak.",
     workedExample: "Rise up, it is working. (pause, steady touch) You are doing beautifully.",
     isHonestLimit: true,
+      honestLimit: "Touch is invited, never taken. No anchor on earth is worth more than her consent, and if you are unsure, ask rather than assume.",
     honestLimitText: "Tone and touch cannot be practised in a browser — they need a person, a room, and a body. This is not a flaw in the app. It is the honest limit, and saying so is part of the design.",
     reflectChecks: [
       "Did my pitch fall at the end of each phrase rather than rise like a question?",
@@ -143,6 +150,7 @@ const CONTENT: Exercise[] = [
     attend: "Steady touch starts a beat before words; then say three true things she can verify with her senses right now, followed by one gentle suggestion. Do not give commands like 'calm down' or 'breathe deep'.",
     workedExample: "[Place your palm broad and warm on the center of her back, pause a beat] You have my hand right here… the floor is solid under your feet… we have this breath together — and as you breathe out, your mouth can soften.",
     isHonestLimit: false,
+      honestLimit: "Breathing with her can settle you both, and it can do nothing at all. It is not a treatment and it is not a fix.",
     reflectChecks: [
       "Did my steady touch land and settle before I spoke a single word?",
       "Did I state three real, verifiable sensory facts before offering any suggestion?",
@@ -157,6 +165,7 @@ const CONTENT: Exercise[] = [
     attend: "Offer a gentle choice where either option creates a calmer shelter. Protect her environment without creating panic or debate.",
     workedExample: "I hear you. Would you like me to draw the curtains and dim the lamps, or would you rather we step into the bathroom together with the lights down low?",
     isHonestLimit: false,
+      honestLimit: "The room can be changed. Her state cannot be controlled by the room, and anyone who tells you otherwise is selling something.",
     reflectChecks: [
       "Did I validate her instinct immediately without debating or explaining the staff's presence?",
       "Did both options offer an immediate, real reduction in sensory overwhelm?",
@@ -171,6 +180,7 @@ const CONTENT: Exercise[] = [
     attend: "The lexical shift: swap the clinical and judgmental label 'failing' for the physiological reality of gathering strength. Pair with permissive invitation to rest.",
     workedExample: "Your body is not failing; it is taking its time to gather power for what comes next. You can close your eyes between these surges, and allow your body to do the waiting.",
     isHonestLimit: false,
+      honestLimit: "Fatigue that stalls is real and worth naming. It is not always rest that fixes it, and you cannot promise this one will work.",
     reflectChecks: [
       "Did I immediately reject the word 'failing' and substitute a truer, restorative perspective?",
       "Did I use permissive phrasing ('you can close your eyes', 'allow') rather than an order to 'stay positive'?",
@@ -185,6 +195,7 @@ const CONTENT: Exercise[] = [
     attend: "Low, slow, falling tone. Remind her of the space and time available. State what is true first before deciding.",
     workedExample: "We have time right now… we are safe in this room… your breathing is steady — and we can take two quiet minutes together before we give any answer.",
     isHonestLimit: false,
+      honestLimit: "You will not see every intervention coming, and you are not meant to. Practise for the ones you can prepare for, not the ones you cannot.",
     reflectChecks: [
       "Did my voice fall in pitch to ground the room rather than rising with anxiety?",
       "Did I say three true things to steady her nervous system before addressing the decision?",
@@ -199,6 +210,7 @@ const CONTENT: Exercise[] = [
     attend: "Normalize the tremor as adrenaline release; use permissive words to allow the tremor rather than fight it. Touch firmly on her thighs.",
     workedExample: "[Rest both hands warm and firm on her thighs, pausing a beat] This shaking is your body clearing adrenaline so your baby can descend. It is completely normal. You don't have to fight it; you can just allow your legs to shake until it passes.",
     isHonestLimit: false,
+      honestLimit: "The tremor is adrenaline and it is normal. Describing it honestly does not make it stop, and she will still be shaking.",
     reflectChecks: [
       "Did I explain the tremor as productive and normal rather than something to fear?",
       "Did I offer permission to release ('allow your legs to shake') rather than telling her to stop shaking?",
@@ -1091,6 +1103,24 @@ export default function App() {
                   "{currentExercise.workedExample}"
                 </div>
               </section>
+
+              {/* THE HONEST LIMIT — after the worked example, before the checklist */}
+              {currentExercise.honestLimit && (
+                <section className={`border p-4 sm:p-6 mb-6 ${
+                  isDark ? 'border-[#59441f] bg-[#241c11]' : 'border-[#e2cfa2] bg-[#fdf8ee]'
+                }`}>
+                  <span className={`block font-sans text-xs uppercase tracking-wider font-bold mb-1.5 ${
+                    isDark ? 'text-[#f0cb7e]' : 'text-[#63470d]'
+                  }`}>
+                    What This Cannot Do
+                  </span>
+                  <p className={`text-sm sm:text-base leading-relaxed italic ${
+                    isDark ? 'text-[#e6d9c7]' : 'text-[#57534e]'
+                  }`}>
+                    {currentExercise.honestLimit}
+                  </p>
+                </section>
+              )}
 
               {/* Self-Reflection & Checklist */}
               <section className={`border p-4 sm:p-6 mb-6 ${

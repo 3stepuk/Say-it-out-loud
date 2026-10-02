@@ -219,6 +219,18 @@ const CONTENT: Exercise[] = [
   }
 ];
 
+const CONTRACT = {
+  // ── Mark's own words, lifted verbatim from the handbook REDRAFTs. ──
+  // Ch 00 L77 · Ch 00 L41 · Ch 04 L49. Nothing written by the editor.
+  headline: "Her body. Her birth. Her choice.",
+  paragraphs: [
+    "Nothing in this book is a trick to make her do something she hasn't chosen. It isn't about controlling her, or the midwives, or the room. It's about making more choices available to her, and giving you a steadier hand while she makes them.",
+    "First, I'm not a therapist. And this model, this process, is not therapy. If you and your partner need therapeutic support or clinical help, for goodness sake, get it properly.",
+    "You first, then the room.",
+  ],
+  closing: "These are things worth trying. None of them is a guarantee, and none of them replaces the people who are trained to look after her.",
+};
+
 const STORAGE_KEY = "say_it_out_loud_progress_v2";
 const THEME_KEY = "say_it_out_loud_theme_v1";
 
@@ -631,6 +643,23 @@ export default function App() {
             <span>{copiedNotification}</span>
           </div>
         )}
+
+        {/* THE CONTRACT — Mark's words, before anything else on the page */}
+        <section className={`mb-6 sm:mb-8 p-4 sm:p-5 border-l-2 font-serif ${
+          isDark ? 'border-[#bd4863] bg-[#1f1812]' : 'border-[#4a1525] bg-[#faf4ec]'
+        }`}>
+          <p className={`text-base sm:text-lg font-normal mb-2 ${isDark ? 'text-[#f5ece2]' : 'text-[#4a1525]'}`}>
+            {CONTRACT.headline}
+          </p>
+          {CONTRACT.paragraphs.map((para, i) => (
+            <p key={i} className={`text-sm sm:text-base leading-relaxed mb-2 ${isDark ? 'text-[#c9bcb0]' : 'text-[#57534e]'}`}>
+              {para}
+            </p>
+          ))}
+          <p className={`text-xs sm:text-sm italic mt-3 pt-2 border-t ${isDark ? 'border-[#59441f] text-[#aba092]' : 'border-[#e2cfa2] text-[#78716c]'}`}>
+            {CONTRACT.closing}
+          </p>
+        </section>
 
         {/* Collapsible reference panels */}
         <section className="mb-6 sm:mb-8 space-y-3 font-serif">
